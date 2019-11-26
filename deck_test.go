@@ -31,7 +31,7 @@ func TestDeck_DealOneCard(t *testing.T) {
 		}
 	}
 
-	// attempt to deal addictional card
+	// attempt to deal additional card
 	c, err := d.DealOneCard()
 	if c != nil && err == nil {
 		t.Error("expected to return nil card and error")
