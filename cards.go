@@ -8,6 +8,7 @@ type Card struct {
 	Suit string
 }
 
+// String returns the string representation of a Card
 func (c *Card) String() string {
 	return fmt.Sprintf("%s_%s", c.Type, c.Suit)
 }
