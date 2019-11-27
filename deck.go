@@ -11,7 +11,7 @@ type Deck struct {
 	cards []*Card
 }
 
-// NewDeck returns aDeckd
+// NewDeck returns a new Deck
 func NewDeck() *Deck {
 	d := make([]*Card, 0)
 
@@ -32,7 +32,7 @@ func NewDeck() *Deck {
 	}
 }
 
-// Shuffle shuffles the poker deck
+// Shuffle shuffles the deck
 func (d *Deck) Shuffle() {
 	rand.Seed(time.Now().UnixNano())
 	for i := 1; i < len(d.cards); i++ {
@@ -43,7 +43,7 @@ func (d *Deck) Shuffle() {
 	}
 }
 
-// DealOneCard returns one card from d.cardsk
+// DealOneCard returns one card from the deck
 func (d *Deck) DealOneCard() (*Card, error) {
 	if len(d.cards) == 0 {
 		return nil, errors.New("empty deck")
